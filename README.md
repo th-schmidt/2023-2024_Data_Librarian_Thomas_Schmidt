@@ -1,3 +1,3 @@
-# Data Librarian Kurs-Repo
+# Data Librarian Kurs-Repo 🚡
 
 

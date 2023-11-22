@@ -1,0 +1,31 @@
+,title,doi
+0,Crowdsourced semantic annotation of scientific publications and tabular data in PDF,10.1145/2814864.2814887
+1,Complex event extraction from real-time news streams,10.1145/2814864.2814870
+2,An elastic and scalable spatiotemporal query processing for linked sensor data,10.1145/2814864.2814869
+3,Toward a statistical data integration environment: the role of semantic metadata,10.1145/2814864.2814879
+4,The role of reasoning for RDF validation,10.1145/2814864.2814867
+5,Accessing and reasoning with data from disparate data sources using modular ontologies and OBDA,10.1145/2814864.2814874
+6,Making sense of description logics,10.1145/2814864.2814866
+7,TailR: a platform for preserving history on the web of data,10.1145/2814864.2814875
+8,Integrating custom index extensions into virtuoso RDF store for e-commerce applications,10.1145/2814864.2814877
+9,Knowledge base shipping to the linked open data cloud,10.1145/2814864.2814885
+10,iCM-Hydraulic: semantics-empowered condition monitoring of hydraulic machines,10.1145/2814864.2814865
+11,A linked data platform for finite element biosimulations,10.1145/2814864.2814884
+12,Cross-lingual lexical matching with word translation and local similarity optimization,10.1145/2814864.2814888
+13,Updating OWL2 ontologies using pruned rulesets,10.1145/2814864.2814871
+14,A semantic method for multiple resources exploitation,10.1145/2814864.2814868
+15,SemaGrow: optimizing federated SPARQL queries,10.1145/2814864.2814886
+16,Streaming transformation of XML to RDF using XPath-based mappings,10.1145/2814864.2814880
+17,LODFlow: a workflow management system for linked data processing,10.1145/2814864.2814882
+18,Machine-interpretable dataset and service descriptions for heterogeneous data access and retrieval,10.1145/2814864.2814873
+19,Data licensing on the cloud: empirical insights and implications for linked data,10.1145/2814864.2814878
+20,An overview of the tourpedia linked dataset with a focus on relations discovery among places,10.1145/2814864.2814876
+21,An optimization approach for load balancing in parallel link discovery,10.1145/2814864.2814872
+22,MEX vocabulary: a lightweight interchange format for machine learning experiments,10.1145/2814864.2814883
+23,Unsupervised learning of an extensive and usable taxonomy for DBpedia,10.1145/2814864.2814881
+24,Living semantic platform,10.1145/2814864.2814893
+25,SimplePARQL: a new approach using keywords over SPARQL to query the web of data,10.1145/2814864.2814890
+26,The DBpedia wayback machine,10.1145/2814864.2814889
+27,Updating SPARQL results in real-time with client-side fragment patching,10.1145/2814864.2814892
+28,Procurement notice enrichment using product ontologies,10.1145/2814864.2814891
+29,Online ontology shortest paths searcher,10.1145/2814864.2814894

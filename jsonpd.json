@@ -1,0 +1,113 @@
+{
+  "id": "https://doi.org/10.5281/zenodo.2599866",
+  "doi": "10.5281/ZENODO.2599866",
+  "url": "https://zenodo.org/record/2599866",
+  "types": {
+    "ris": "GEN",
+    "bibtex": "misc",
+    "citeproc": "article",
+    "schemaOrg": "CreativeWork",
+    "resourceTypeGeneral": "Other"
+  },
+  "creators": [
+    {
+      "name": "Landesinitiative NFDI Der Digitalen Hochschule NRW",
+      "affiliation": [],
+      "nameIdentifiers": []
+    },
+    {
+      "name": "AG FDM Awareness",
+      "affiliation": [],
+      "nameIdentifiers": []
+    }
+  ],
+  "titles": [
+    {
+      "title": "Nachnutzbare Awarenessmaterialien für Forschungsdatenmanagement (FDM)"
+    }
+  ],
+  "publisher": "Zenodo",
+  "container": {
+    "type": "Series",
+    "identifier": "https://zenodo.org/communities/landesinitiative_fdm_nrw",
+    "identifierType": "URL"
+  },
+  "subjects": [
+    {
+      "subject": "RDM"
+    },
+    {
+      "subject": "FDM"
+    },
+    {
+      "subject": "Researchdatamanagement"
+    },
+    {
+      "subject": "Forschungsdatenmanagement"
+    },
+    {
+      "subject": "Researchdata"
+    },
+    {
+      "subject": "Forschungsdaten"
+    }
+  ],
+  "contributors": [],
+  "dates": [
+    {
+      "date": "2019-03-26",
+      "dateType": "Issued"
+    }
+  ],
+  "publicationYear": 2019,
+  "language": "de",
+  "identifiers": [
+    {
+      "identifier": "https://zenodo.org/record/3884745",
+      "identifierType": "URL"
+    }
+  ],
+  "sizes": [],
+  "formats": [],
+  "rightsList": [
+    {
+      "rights": "Open Access",
+      "rightsUri": "info:eu-repo/semantics/openAccess"
+    }
+  ],
+  "descriptions": [
+    {
+      "description": "In Rechenzentren, Bibliotheken und Einrichtungen für Forschungsförderung ist man sich der Bedeutung von FDM längst bewusst. Doch auch wenn Daten als Grundlage zukunftsfähiger Forschung gelten und Basis von Wissensgenerierung sind, bedarf es in der Breite der Forschenden noch viel Sensibilisierung und Aufklärung. Zur Unterstützung der Mitarbeiterinnen und Mitarbeiter der Infrastruktureinrichtungen bei dieser Aufgabe, hat die Landesinitiative fdm.nrw gemeinsam mit einer hochschulübergreifenden Arbeitsgruppe Awareness-Materialien für FDM entwickelt, die zur freien Nachnutzung und Anpassung unter der Lizenz CC0 (Ausnahmen wurden gekennzeichnet) zur Verfügung stehen. Diese wurden im April 2019 veröffentlicht. Die Awareness-Materialien werden stetig erweitert. In Version 2 wurden Flyer zur Informationsplattform forschungsdaten.info und zum Thema Datenschutz ergänzt. Alle Flyer wurden zudem auf Englisch übersetzt. Kontakt: info@fdm.nrw",
+      "descriptionType": "Abstract"
+    },
+    {
+      "description": "Die Flyer und Poster liegen als PDF sowie als Indesign-Dateien (*indd) sowie als IDML-Dateien vor. Die verwendeten Bilder finden sich im jeweiligen \"Links\"-Ordner.",
+      "descriptionType": "Other"
+    }
+  ],
+  "geoLocations": [],
+  "fundingReferences": [],
+  "relatedIdentifiers": [
+    {
+      "relationType": "HasVersion",
+      "relatedIdentifier": "10.5281/zenodo.2599867",
+      "relatedIdentifierType": "DOI"
+    },
+    {
+      "relationType": "HasVersion",
+      "relatedIdentifier": "10.5281/zenodo.3884745",
+      "relatedIdentifierType": "DOI"
+    },
+    {
+      "relationType": "IsPartOf",
+      "relatedIdentifier": "https://zenodo.org/communities/landesinitiative_fdm_nrw",
+      "relatedIdentifierType": "URL"
+    }
+  ],
+  "relatedItems": [],
+  "schemaVersion": "http://datacite.org/schema/kernel-4",
+  "providerId": "cern",
+  "clientId": "cern.zenodo",
+  "agency": "datacite",
+  "state": "findable"
+}

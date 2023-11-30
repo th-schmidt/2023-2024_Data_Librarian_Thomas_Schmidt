@@ -1,3 +1,0 @@
-      62 2023-11-20-Dates_and_ISSNs.tsv
-     131 2023-11-20-Article_list_dirty.tsv
-     193 total

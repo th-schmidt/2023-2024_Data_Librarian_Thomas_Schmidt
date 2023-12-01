@@ -1,0 +1,111 @@
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix ex: <http://example.org/ontology/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+wd:Q19325957 a dbo:Person ;
+    rdfs:label "Lucy Foley"@en ;
+    wdt:P800 wd:Q122363681 .
+
+wd:Q27449519 a dbo:Person ;
+    rdfs:label "Brit Bennett"@en ;
+    wdt:P800 wd:Q98476957 .
+
+wd:Q318429 a dbo:Person ;
+    rdfs:label "Malcolm Gladwell"@en ;
+    wdt:P800 wd:Q69523853 .
+
+wd:Q510034 a dbo:Person ;
+    rdfs:label "Sanjay Gupta"@en ;
+    wdt:P800 wd:Q115164824 .
+
+wd:Q63098703 a dbo:Person ;
+    rdfs:label "Jessica Bruder"@en ;
+    wdt:P800 wd:Q61740820 .
+
+wd:Q76 a dbo:Person ;
+    rdfs:label "Barack Obama"@en ;
+    wdt:P800 wd:Q101438737 .
+
+wd:Q926682 a dbo:Person ;
+    rdfs:label "Matt Haig"@en ;
+    wdt:P800 wd:Q106814534 .
+
+wd:Q101438737 a wd:Q128093 ;
+    rdfs:label "A Promised Land"@en ;
+    ex:hasCheckouts [ xsd:integer "2041" ] ;
+    wdt:P123 wd:Q744182 ;
+    wdt:P921 wd:Q213051,
+        wd:Q309,
+        wd:Q7163 .
+
+wd:Q106814534 a wd:Q128093 ;
+    rdfs:label "The Midnight Library: A Novel"@en ;
+    ex:hasCheckouts [ xsd:integer "1505" ] ;
+    wdt:P123 wd:Q3374730 ;
+    wdt:P921 wd:Q24925,
+        wd:Q8242,
+        wd:Q8253 .
+
+wd:Q115164824 a wd:Q571 ;
+    rdfs:label "Keep sharp : build a better brain at any age / Sanjay Gupta with Kristin Loberg."@en ;
+    ex:hasCheckouts [ xsd:integer "1318" ] ;
+    wdt:P123 wd:Q1756332 ;
+    wdt:P921 wd:Q65540875 .
+
+wd:Q122363681 a wd:Q106833 ;
+    rdfs:label "The Guest List: A Novel (unabridged)"@en ;
+    ex:hasCheckouts [ xsd:integer "1162" ] ;
+    wdt:P123 wd:Q95149 ;
+    wdt:P921 wd:Q182015,
+        wd:Q8253 .
+
+wd:Q1282208 rdfs:label "W. W. Norton & Company"@en .
+
+wd:Q1756332 rdfs:label "Simon & Schuster,"@en .
+
+wd:Q4923391 rdfs:label "Blackstone Audio, Inc."@en .
+
+wd:Q4943292 rdfs:label "Books on Tape"@en .
+
+wd:Q571 rdfs:label "BOOK"@en .
+
+wd:Q61740820 a wd:Q128093 ;
+    rdfs:label "Nomadland: Surviving America in the Twenty-First Century"@en ;
+    ex:hasCheckouts [ xsd:integer "1434" ] ;
+    wdt:P123 wd:Q1282208 ;
+    wdt:P921 wd:Q21201,
+        wd:Q213051,
+        wd:Q4830453 .
+
+wd:Q69523853 a wd:Q106833 ;
+    rdfs:label "Talking to Strangers: What We Should Know about the People We Don't Know (unabridged)"@en ;
+    ex:hasCheckouts [ xsd:integer "1435" ] ;
+    wdt:P123 wd:Q4923391 ;
+    wdt:P921 wd:Q21201,
+        wd:Q213051,
+        wd:Q9418 .
+
+wd:Q744182 rdfs:label "Random House, Inc."@en .
+
+wd:Q95149 rdfs:label "HarperCollins Publishers Inc."@en .
+
+wd:Q98476957 a wd:Q106833,
+        wd:Q128093 ;
+    rdfs:label "The Vanishing Half: A Novel"@en,
+        "The Vanishing Half: A Novel (unabridged)"@en ;
+    ex:hasCheckouts [ xsd:integer "1629" ],
+        [ xsd:integer "1384" ] ;
+    wdt:P123 wd:Q3374730,
+        wd:Q4943292 ;
+    wdt:P921 wd:Q8242,
+        wd:Q8253 .
+
+wd:Q3374730 rdfs:label "Penguin Group (USA), Inc."@en .
+
+wd:Q106833 rdfs:label "AUDIOBOOK"@en .
+
+wd:Q128093 rdfs:label "EBOOK"@en .
+

@@ -3,7 +3,7 @@
 # Clean rows starting with IMPORTANT string to get correct column series
 sed -E 's/IMPORTANT\t*//g' 2023-11-20-Article_list_dirty.tsv > clean_issn.tsv
 
-# Grep ISSN and Date column but preserve column layout
+# Grep ISSN and Date column but preserve textline layout (i.e. omit grep -o parameter)
 cut -f 5,12 clean_issn.tsv | grep -E "[0-9]{4}[-0-9A-Z]*" > issn_dates.tsv
 
 # Remove ISSN strings from iss_dates.tsv and sort it uniquly; ignore non-printable chars

@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# Grep all ISSN from all columns, remove trailing whitespaces and save them to tsv
-cut -f 4,5,7,12,14 2023-11-20-Article_list_dirty.tsv | grep -Eo "\w{4}-\w{4}\s|\s\w{4}-\w{4}\s" | sed -E 's/\t| //g' > col_issn.tsv
+# Clean rows starting with IMPORTANT string to get correct column series
+sed -E 's/IMPORTANT\t*//g' 2023-11-20-Article_list_dirty.tsv > clean_issn.tsv
 
-# Grep all corresponding dates from all columns, remove trailing whitespaces and save them to a seperate tsv
-cut -f 4,5,7,12,14 2023-11-20-Article_list_dirty.tsv | grep -Eo "\s19[0-9]{2}" | sed -E 's/\t| //g' > col_date.tsv
+# Grep ISSN and Date column but preserve column layout
+cut -f 5,12 clean_issn.tsv | grep -E "[0-9]{4}[-0-9A-Z]*" > issn_dates.tsv
 
-# Combine both tsvs using paste
-paste col_issn.tsv col_date.tsv > issn_date.tsv
+# Remove ISSN strings from iss_dates.tsv and sort it uniquly; ignore non-printable chars
+sed -E 's/issn[:[:space:]]*//gI' issn_dates.tsv | sort -ui > 2023-11-30-ISSN_DATES_ths.tsv
 
-# Sort tsv, remove duplicates and save final version
-sort -n issn_date.tsv | uniq > 2023-11-30-Dates_and_ISSNs.tsv
+# Remove temp tsvs
+rm clean_issn.tsv issn_dates.tsv

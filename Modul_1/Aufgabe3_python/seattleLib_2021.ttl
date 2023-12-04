@@ -5,31 +5,31 @@
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-wd:Q19325957 a dbo:Person ;
+wd:Q19325957 a dbo:Author ;
     rdfs:label "Lucy Foley"@en ;
     wdt:P800 wd:Q122363681 .
 
-wd:Q27449519 a dbo:Person ;
+wd:Q27449519 a dbo:Author ;
     rdfs:label "Brit Bennett"@en ;
     wdt:P800 wd:Q98476957 .
 
-wd:Q318429 a dbo:Person ;
+wd:Q318429 a dbo:Author ;
     rdfs:label "Malcolm Gladwell"@en ;
     wdt:P800 wd:Q69523853 .
 
-wd:Q510034 a dbo:Person ;
+wd:Q510034 a dbo:Author ;
     rdfs:label "Sanjay Gupta"@en ;
     wdt:P800 wd:Q115164824 .
 
-wd:Q63098703 a dbo:Person ;
+wd:Q63098703 a dbo:Author ;
     rdfs:label "Jessica Bruder"@en ;
     wdt:P800 wd:Q61740820 .
 
-wd:Q76 a dbo:Person ;
+wd:Q76 a dbo:Author ;
     rdfs:label "Barack Obama"@en ;
     wdt:P800 wd:Q101438737 .
 
-wd:Q926682 a dbo:Person ;
+wd:Q926682 a dbo:Author ;
     rdfs:label "Matt Haig"@en ;
     wdt:P800 wd:Q106814534 .
 

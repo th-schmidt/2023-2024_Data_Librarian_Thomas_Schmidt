@@ -5,6 +5,10 @@
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+wd:Q18763622 a dbo:Author ;
+    rdfs:label "Celeste Ng"@en ;
+    wdt:P800 wd:Q55012468 .
+
 wd:Q19325957 a dbo:Author ;
     rdfs:label "Lucy Foley"@en ;
     wdt:P800 wd:Q122363681 .
@@ -21,13 +25,33 @@ wd:Q510034 a dbo:Author ;
     rdfs:label "Sanjay Gupta"@en ;
     wdt:P800 wd:Q115164824 .
 
+wd:Q533400 a dbo:Author ;
+    rdfs:label "Kristin Hannah"@en ;
+    wdt:P800 wd:Q112119139 .
+
+wd:Q6077806 a dbo:Author ;
+    rdfs:label "Isabel Wilkerson"@en ;
+    wdt:P800 wd:Q484416 .
+
 wd:Q63098703 a dbo:Author ;
     rdfs:label "Jessica Bruder"@en ;
     wdt:P800 wd:Q61740820 .
 
+wd:Q7352852 a dbo:Author ;
+    rdfs:label "Robin Wall Kimmerer"@en ;
+    wdt:P800 wd:Q85748689 .
+
 wd:Q76 a dbo:Author ;
     rdfs:label "Barack Obama"@en ;
     wdt:P800 wd:Q101438737 .
+
+wd:Q80133770 a dbo:Author ;
+    rdfs:label "Kiley Reid"@en ;
+    wdt:P800 wd:Q85803918 .
+
+wd:Q83380765 a dbo:Author ;
+    rdfs:label "Jeanine Cummins"@en ;
+    wdt:P800 wd:Q83440604 .
 
 wd:Q926682 a dbo:Author ;
     rdfs:label "Matt Haig"@en ;
@@ -49,15 +73,26 @@ wd:Q106814534 a wd:Q128093 ;
         wd:Q8242,
         wd:Q8253 .
 
+wd:Q112119139 a wd:Q128093 ;
+    rdfs:label "The Four Winds: A Novel"@en ;
+    ex:hasCheckouts [ xsd:integer "980" ] ;
+    wdt:P123 wd:Q2108217 ;
+    wdt:P921 wd:Q1196408,
+        wd:Q8242,
+        wd:Q8253 .
+
 wd:Q115164824 a wd:Q571 ;
     rdfs:label "Keep sharp : build a better brain at any age / Sanjay Gupta with Kristin Loberg."@en ;
     ex:hasCheckouts [ xsd:integer "1318" ] ;
     wdt:P123 wd:Q1756332 ;
     wdt:P921 wd:Q65540875 .
 
-wd:Q122363681 a wd:Q106833 ;
-    rdfs:label "The Guest List: A Novel (unabridged)"@en ;
-    ex:hasCheckouts [ xsd:integer "1162" ] ;
+wd:Q122363681 a wd:Q106833,
+        wd:Q128093 ;
+    rdfs:label "The Guest List: A Novel"@en,
+        "The Guest List: A Novel (unabridged)"@en ;
+    ex:hasCheckouts [ xsd:integer "992" ],
+        [ xsd:integer "1162" ] ;
     wdt:P123 wd:Q95149 ;
     wdt:P921 wd:Q182015,
         wd:Q8253 .
@@ -66,11 +101,21 @@ wd:Q1282208 rdfs:label "W. W. Norton & Company"@en .
 
 wd:Q1756332 rdfs:label "Simon & Schuster,"@en .
 
+wd:Q484416 a wd:Q571 ;
+    rdfs:label "Caste : the origins of our discontents / Isabel Wilkerson."@en ;
+    ex:hasCheckouts [ xsd:integer "895" ] ;
+    wdt:P123 wd:Q744182 .
+
 wd:Q4923391 rdfs:label "Blackstone Audio, Inc."@en .
 
 wd:Q4943292 rdfs:label "Books on Tape"@en .
 
-wd:Q571 rdfs:label "BOOK"@en .
+wd:Q55012468 a wd:Q128093 ;
+    rdfs:label "Little Fires Everywhere: A Novel"@en ;
+    ex:hasCheckouts [ xsd:integer "1059" ] ;
+    wdt:P123 wd:Q3374730 ;
+    wdt:P921 wd:Q8242,
+        wd:Q8253 .
 
 wd:Q61740820 a wd:Q128093 ;
     rdfs:label "Nomadland: Surviving America in the Twenty-First Century"@en ;
@@ -88,7 +133,29 @@ wd:Q69523853 a wd:Q106833 ;
         wd:Q213051,
         wd:Q9418 .
 
-wd:Q744182 rdfs:label "Random House, Inc."@en .
+wd:Q7683856 rdfs:label "Tantor Media, Inc"@en .
+
+wd:Q83440604 a wd:Q128093 ;
+    rdfs:label "American Dirt: A Novel"@en ;
+    ex:hasCheckouts [ xsd:integer "948" ] ;
+    wdt:P123 wd:Q2108217 ;
+    wdt:P921 wd:Q8242,
+        wd:Q8253 .
+
+wd:Q85748689 a wd:Q106833 ;
+    rdfs:label "Braiding Sweetgrass: Indigenous Wisdom, Scientific Knowledge and the Teachings of Plants (unabridged) (Unabridged)"@en ;
+    ex:hasCheckouts [ xsd:integer "1036" ] ;
+    wdt:P123 wd:Q7683856 ;
+    wdt:P921 wd:Q180445,
+        wd:Q21201,
+        wd:Q213051 .
+
+wd:Q85803918 a wd:Q128093 ;
+    rdfs:label "Such a Fun Age"@en ;
+    ex:hasCheckouts [ xsd:integer "865" ] ;
+    wdt:P123 wd:Q3374730 ;
+    wdt:P921 wd:Q8242,
+        wd:Q8253 .
 
 wd:Q95149 rdfs:label "HarperCollins Publishers Inc."@en .
 
@@ -103,9 +170,16 @@ wd:Q98476957 a wd:Q106833,
     wdt:P921 wd:Q8242,
         wd:Q8253 .
 
-wd:Q3374730 rdfs:label "Penguin Group (USA), Inc."@en .
+wd:Q2108217 rdfs:label "Macmillan Publishers"@en .
+
+wd:Q571 rdfs:label "BOOK"@en .
+
+wd:Q744182 rdfs:label "Random House,"@en,
+        "Random House, Inc."@en .
 
 wd:Q106833 rdfs:label "AUDIOBOOK"@en .
+
+wd:Q3374730 rdfs:label "Penguin Group (USA), Inc."@en .
 
 wd:Q128093 rdfs:label "EBOOK"@en .
 

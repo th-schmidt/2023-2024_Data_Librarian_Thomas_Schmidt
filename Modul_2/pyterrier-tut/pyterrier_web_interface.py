@@ -5,7 +5,8 @@ import pyterrier as pt
 import pickle
 import os
 
-os.environ["JAVA_HOME"] = "./jdk/Contents/Home/"
+os.environ["JAVA_HOME"] = "./jdk/Contents/Home/" # Set JAVA env variable
+
 
 if not pt.started():
     pt.init()

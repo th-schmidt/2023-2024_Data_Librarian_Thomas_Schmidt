@@ -2,7 +2,7 @@
 .vscode
 .DS_Store
 .pkl
-venv/
+venv*/
 Testing/
 Modul_2/ZKDL2324_Modul2/
 jdk/

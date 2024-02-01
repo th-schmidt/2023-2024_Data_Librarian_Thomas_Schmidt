@@ -76,8 +76,8 @@ def top_search_terms():
         tf_dict[x.getKey()] = x.getValue().frequency
     tf_dict_sorted = sorted(tf_dict.items(), key=lambda x: x[1], reverse=True)
     df_terms = pd.DataFrame(tf_dict_sorted, columns=['Term', 'Count'])
-    st.title(f'Top 500 Search Terms')
-    st.table(data=df_terms)
+    st.title(f'Top 100 Search Terms')
+    st.table(data=df_terms[:100])
 
 
 if not "engine" in st.session_state:

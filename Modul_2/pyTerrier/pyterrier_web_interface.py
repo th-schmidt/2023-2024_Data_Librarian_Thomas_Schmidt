@@ -4,6 +4,7 @@ import streamlit as st
 import pyterrier as pt
 import pandas as pd
 import pickle
+import random
 import os
 
 os.environ["JAVA_HOME"] = "./jdk/Contents/Home/" # Set JAVA env variable
@@ -26,7 +27,7 @@ def init():
     st.session_state["lexicon"] = index.getLexicon()
 
 
-def print_results(entries):
+def print_results(entries, score_flag):
     """
     Prints the search results to the Streamlit app.
 
@@ -60,7 +61,8 @@ def print_results(entries):
                         st.write(f"**{field.upper()}:** \t {entry[0][field]}")
                 else:
                     st.write(f"**{field.capitalize()}:** \t {entry[0][field]}")
-            st.write(f"**:blue[Score: {entry[1]}]**")
+            if score_flag:
+                st.write(f"**:red[Score: {entry[1]}]**")
             st.divider()
             result_num += 1
     else:
@@ -68,7 +70,7 @@ def print_results(entries):
         st.write(f'Please adjust your search criteria. :pray:')
 
 
-def search(query, search_limit, year_range, abstract_flag, url_flag):
+def search(query, search_limit, year_range, abstract_flag, url_flag, score_flag):
     """
     Searches dataset for entries that match the given query, within the specified time period and with the specified filters.
 
@@ -106,7 +108,7 @@ def search(query, search_limit, year_range, abstract_flag, url_flag):
             if include_entry:
                 filtered_entries.append((entry, score))
             
-    print_results(filtered_entries)
+    print_results(filtered_entries, score_flag)
 
 
 def top_search_terms():
@@ -130,7 +132,9 @@ if not "engine" in st.session_state:
 
 ### Sidebar: Searching
 st.sidebar.title(f'**Search**')
-query = st.sidebar.text_input(f'**Query:**', value='makerspace')
+
+example_queries = ['makerspace','virtual reality', 'makerspaces in libraries', 'virtual reality in libraries']
+query = st.sidebar.text_input(f'**Query:**', value=f"{random.choice(example_queries)}")
 
 # Sidebar filter section
 with st.sidebar.expander('Filters'):
@@ -138,8 +142,14 @@ with st.sidebar.expander('Filters'):
     search_limit = st.slider(label="**Number of Search Results**", min_value=1, max_value=500, value=250)
     abstract_flag = st.checkbox(label='Show only results with abstracts', value=False)
     url_flag = st.checkbox(label='Show only results with unique URLs', value=False)
+    score_flag = st.checkbox(label='Show Ranking Score', value=False)
 
-st.sidebar.button("Search", on_click=search, args=(query, search_limit, year_range, abstract_flag, url_flag))
+st.sidebar.button("Search", on_click=search, args=(query, 
+                                                   search_limit, 
+                                                   year_range, 
+                                                   abstract_flag, 
+                                                   url_flag,
+                                                   score_flag))
 st.sidebar.divider()
 
 ### Sidebar: Statistics

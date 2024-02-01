@@ -13,6 +13,13 @@ if not pt.started():
     pt.init()
 
 def init():
+    """
+    Initialize the Streamlit app by loading the search engine, data, and lexicon.
+
+    Returns:
+    --------
+    None
+    """
     index = pt.IndexFactory.of("./makerspace_index_mult/data.properties")
     st.session_state["engine"] = pt.BatchRetrieve(index, wmodel="TF_IDF")
     st.session_state["data"] = pickle.load(open("./bibsonomy_clean_data/makerspace_vr.pkl", "rb"))
@@ -20,6 +27,18 @@ def init():
 
 
 def print_results(entries):
+    """
+    Prints the search results to the Streamlit app.
+
+    Parameters:
+    -----------
+    entries: List[Tuple[Dict[str, Any], float]]
+        A list of tuples containing the search result entries and their scores.
+
+    Returns:
+    --------
+    None
+    """
     result_num = 1
     fields_to_show = ['text', 'year', 'author', 'url', 'abstract', 'tags']
     if len(entries) >= 1:
@@ -50,6 +69,26 @@ def print_results(entries):
 
 
 def search(query, search_limit, year_range, abstract_flag, url_flag):
+    """
+    Searches dataset for entries that match the given query, within the specified time period and with the specified filters.
+
+    Parameters:
+    -----------
+    query: str
+        The search query.
+    search_limit: int
+        The maximum number of search results to return.
+    year_range: tuple
+        A tuple containing the minimum and maximum years to search within.
+    abstract_flag: bool
+        A boolean indicating whether to include results with abstracts.
+    url_flag: bool
+        A boolean indicating whether to include results with unique URLs.
+
+    Returns:
+    --------
+    None
+    """
     res = st.session_state["engine"].search(query)[:search_limit]
     
     filtered_entries = []
@@ -71,6 +110,12 @@ def search(query, search_limit, year_range, abstract_flag, url_flag):
 
 
 def top_search_terms():
+    """
+    This function generates a list of the top 100 search terms used in the dataset, sorted by their frequency.
+
+    Returns:
+        A pandas dataframe containing the top 100 search terms and their frequencies.
+    """
     tf_dict = {}
     for x in st.session_state["lexicon"]:
         tf_dict[x.getKey()] = x.getValue().frequency

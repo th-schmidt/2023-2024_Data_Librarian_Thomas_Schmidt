@@ -4,14 +4,8 @@ import streamlit as st
 import pyterrier as pt
 import pandas as pd
 import pickle
-import random
 import os
 
-os.environ["JAVA_HOME"] = "./jdk/Contents/Home/" # Set JAVA env variable
-
-
-if not pt.started():
-    pt.init()
 
 def init():
     """
@@ -127,14 +121,17 @@ def top_search_terms():
     st.table(data=df_terms[:100])
 
 
+os.environ["JAVA_HOME"] = "./jdk/Contents/Home/" # Set JAVA env variable
+
+if not pt.started():
+    pt.init()
+
 if not "engine" in st.session_state:
     init()
 
 ### Sidebar: Searching
 st.sidebar.title(f'**Search**')
-
-example_queries = ['makerspace','virtual reality', 'makerspaces in libraries', 'virtual reality in libraries']
-query = st.sidebar.text_input(f'**Query:**', value=f"{random.choice(example_queries)}")
+query = st.sidebar.text_input(f'**Query:**', value=f"makerspace")
 
 # Sidebar filter section
 with st.sidebar.expander('Filters'):

@@ -1,6 +1,6 @@
 import requests
 import pandas as pd
-import re
+import urllib.parse
 
 from pathlib import Path
 
@@ -35,7 +35,7 @@ def df_from_bibsonomy_query(query, limit=1000, to_json=False, output_dir=Path('.
     # Query bibsonomy
     dfs = []
     for q in query:
-        url = f"https://www.bibsonomy.org/json/search/{q.replace(' ', '%20')}?duplicates=merged&items={limit}"
+        url = f"https://www.bibsonomy.org/json/search/{urllib.parse.quote(q)}?duplicates=merged&items={limit}"
         response = requests.get(url)
         if response.status_code == 200:
             data = response.json()
